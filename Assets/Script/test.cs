@@ -1,25 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class TestObject : MonoBehaviour
-{
-    public void TestA()
-    {
-        Debug.LogFormat( "Test A" );
-    }
+public class test : MonoBehaviour {
 
-    private void TestB()
+    // ボタンが押された場合、今回呼び出される関数
+    public void OnClick()
     {
-        Debug.LogFormat( "Test B" );
+        Debug.Log("押された!");  // ログを出力
     }
-
-    protected void TestC()
-    {
-        Debug.LogFormat( "Test C" );
-    }
-
-    internal void TestD()
-    {
-        Debug.LogFormat( "Test D" );
-    }
-
 }

@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/VirtualBook4.unity
-    guid: 1b95d6913092f1a43bf3d908917ab302
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/Scenes/MAVenRead_ver1.unity
+    guid: ad0efef2f05ccc04e93754f5b41c8fee
   - enabled: 1
-    path: Assets/Scenes/teest.unity
-    guid: 8575ae253ab76004c87d7ee0e5ff710b
+    path: Assets/Scenes/buttonTest.unity
+    guid: 1406068dc5181404e93cfc20a7a73167
   m_configObjects: {}
