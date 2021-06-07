@@ -30,7 +30,7 @@ public class TextChange : MonoBehaviour
             }
         }
 
-        for (int i = 24; i < NumberTextSorte + NumberTextSorte / 24; i += 25)
+        for (int i = 15; i < NumberTextSorte + NumberTextSorte / 15; i += 16)
         {
             for (int j = 0; j < NumberPages; j++)
             {
