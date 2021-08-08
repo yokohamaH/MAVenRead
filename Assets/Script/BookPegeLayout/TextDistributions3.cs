@@ -58,27 +58,9 @@ public class TextDistributions3 : TextObject
             }
 
         }
-
-        base.Page1TargetText.text = pageData[0];
-        Page2TargetText.text = pageData[1];
-        Page3TargetText.text = pageData[2];
-        Page4TargetText.text = pageData[3];
-        Page5TargetText.text = pageData[4];
-        Page6TargetText.text = pageData[5];
-        Page7TargetText.text = pageData[6];
-        Page8TargetText.text = pageData[7];
-        Page9TargetText.text = pageData[8];
-        Page10TargetText.text = pageData[9];
-        Page11TargetText.text = pageData[10];
-        Page12TargetText.text = pageData[11];
-        Page13TargetText.text = pageData[12];
-        Page14TargetText.text = pageData[13];
-        Page15TargetText.text = pageData[14];
-        Page16TargetText.text = pageData[15];
-        Page17TargetText.text = pageData[16];
-        Page18TargetText.text = pageData[17];
-        Page19TargetText.text = pageData[18];
-        Page20TargetText.text = pageData[19];
-
+        for (int i = 0; i < PagesText.Length; i++)
+        {
+            PagesText[i].GetComponent<Text>().text = pageData[i];
+        }
     }
 }
