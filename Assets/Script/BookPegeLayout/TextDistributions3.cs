@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System;
 using System.IO;
 
+//MAVenReadのダミー本の各ページにテキストを割り当てる
 public class TextDistributions3 : TextObject
 {
     public GameObject hana;

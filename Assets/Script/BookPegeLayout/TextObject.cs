@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System;
 using System.IO;
 
+//テキストデータとページのオブジェクトを受け取って管理するスクリプト
 public class TextObject : MonoBehaviour
 {
     public TextObjectData Books;

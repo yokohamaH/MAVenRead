@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+//物語のScriptableObject
 [CreateAssetMenu(menuName = "MyScriptable/TextObject")]
 public class TextObjectData : ScriptableObject
 {

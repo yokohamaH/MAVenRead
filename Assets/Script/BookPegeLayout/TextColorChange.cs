@@ -5,29 +5,32 @@ using UnityEngine.UI;
 using System;
 using System.IO;
 
-public class TextColorChange : MonoBehaviour
+//テキストの色を変更する
+public class TextColorChange : TextObject
 {
     public GameObject SoldierScore;
     public void ChangeYellow()
     {
-        Text SoldierScoreText = SoldierScore.GetComponent<Text>();
-
-        SoldierScoreText.color = Color.yellow;
-
+        for (int i = 0; i < PagesText.Length; i++)
+        {
+            Text SoldierScoreText = PagesText[i].GetComponent<Text>();
+            SoldierScoreText.color = Color.yellow;
+        }
     }
     public void ChangeRed()
     {
-        Text SoldierScoreText = SoldierScore.GetComponent<Text>();
-
-        SoldierScoreText.color = Color.red;
-
+        for (int i = 0; i < PagesText.Length; i++)
+        {
+            Text SoldierScoreText = PagesText[i].GetComponent<Text>();
+            SoldierScoreText.color = Color.yellow;
+        }
     }
     public void ChangeBlack()
     {
-        Text SoldierScoreText = SoldierScore.GetComponent<Text>();
-
-        SoldierScoreText.color = Color.black;
-
+        for (int i = 0; i < PagesText.Length; i++)
+        {
+            Text SoldierScoreText = PagesText[i].GetComponent<Text>();
+            SoldierScoreText.color = Color.yellow;
+        }
     }
-
 }

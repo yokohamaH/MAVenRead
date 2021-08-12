@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//デジタル表示の時にボタンでページを移動するためのスクリプト
 public class TextChange3 : MonoBehaviour
 {
     [SerializeField] public TextMeshProUGUI booktext;
