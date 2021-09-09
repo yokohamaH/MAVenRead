@@ -8,7 +8,6 @@ using System.IO;
 //テキストの色を変更する
 public class TextColorChange : TextObject
 {
-    public GameObject SoldierScore;
     public void ChangeYellow()
     {
         for (int i = 0; i < PagesText.Length; i++)
