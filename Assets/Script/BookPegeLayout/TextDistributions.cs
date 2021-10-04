@@ -6,27 +6,10 @@ using System;
 using System.IO;
 
 //MAVenReadのダミー本の各ページにテキストを割り当てる
-public class TextDistributions3 : TextObject
+public class TextDistributions : TextObject
 {
-    public GameObject hana;
-    public GameObject amenimo;
     int NumberTextSorte = 0;
-
-    void Update()
-    {
-        MeshRenderer hanaMeshRenderer = hana.GetComponent<MeshRenderer>();
-        MeshRenderer amenimoMeshRenderer = amenimo.GetComponent<MeshRenderer>();
-
-        if (hanaMeshRenderer.isVisible)
-        {
-            TextSort(0);
-        }
-        else if (amenimoMeshRenderer.isVisible)
-        {
-            TextSort(2);
-        }
-    }
-    private void TextSort(int id)
+    public void TextSort(int id)
     {
         string TextDatas = bookData[id];
         int NumberPages = TextDatas.Length / 15 / 12;

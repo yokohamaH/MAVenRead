@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,15 +6,20 @@ using System;
 using System.IO;
 
 //MAVenReadのダミー本の各ページにテキストを割り当てる
-public class TextDistributions3_copy : TextObject
+public class BookChange : TextObject
 {
     int NumberTextSorte = 0;
-    public void TextSort(int id)
+    string TextDatas = null;
+    public void BookChang(int id)
     {
-        string TextDatas = bookData[id];
-        int NumberPages = TextDatas.Length / 15 / 12;
+        TextDatas = bookData[id];
+    }
+
+    public void TextSote(int Row, int Column)
+    {
+        int NumberPages = TextDatas.Length / Row / Column;
         int len = TextDatas.Length;
-        NumberTextSorte = 15 * 12;
+        NumberTextSorte = Row * Column;
 
         string[] pageData = new string[21];
         for (int i = 0; i < NumberPages + 1; i++)
@@ -29,7 +34,7 @@ public class TextDistributions3_copy : TextObject
             }
         }
 
-        for (int i = 15; i < NumberTextSorte + NumberTextSorte / 15; i += 16)
+        for (int i = Row; i < NumberTextSorte + NumberTextSorte / Row; i = i + Row + 1)
         {
             for (int j = 0; j < NumberPages; j++)
             {
