@@ -11,12 +11,14 @@ public class TextDistributions_2 : TextObject_2
     int NumberTextSorte = 0;
     public void TextSort(int id)
     {
+        //Debug.Log(a);
         string TextDatas = bookData[id];
         int NumberPages = TextDatas.Length / 15 / 12;
         int len = TextDatas.Length;
         NumberTextSorte = 15 * 12;
 
         string[] pageData = new string[21];
+        PagesText[0].GetComponent<Text>().text = TextDatas;
         for (int i = 0; i < NumberPages + 1; i++)
         {
             if (i != NumberPages)
@@ -28,7 +30,6 @@ public class TextDistributions_2 : TextObject_2
                 pageData[i] = TextDatas.Substring(i * NumberTextSorte, len - i * NumberTextSorte);
             }
         }
-
         for (int i = 15; i < NumberTextSorte + NumberTextSorte / 15; i += 16)
         {
             for (int j = 0; j < NumberPages; j++)
@@ -41,9 +42,9 @@ public class TextDistributions_2 : TextObject_2
             }
 
         }
-        for (int i = 0; i < PagesText.Length; i++)
+        for (int i = 1; i < PagesText.Length; i++)
         {
-            PagesText[i].GetComponent<Text>().text = pageData[i];
+            PagesText[i].GetComponent<Text>().text = pageData[i - 1];
         }
     }
 }
