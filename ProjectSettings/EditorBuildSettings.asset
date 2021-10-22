@@ -26,10 +26,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Experience_XBook.unity
     guid: feb719b8e05df2f46a2ae5b012425b70
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ChangeMAVenRead.unity
     guid: 9d3cf4787a49cae4a9d5504ff25f8795
   - enabled: 0
     path: Assets/Scenes/XBook_ver3.unity
     guid: 2f56e5cf2058aad4fbc6d3cf255c1515
+  - enabled: 1
+    path: Assets/Scenes/ChangeMAVenRead2.unity
+    guid: 73ba391d813169e4c931f7d79b46b8a5
   m_configObjects: {}

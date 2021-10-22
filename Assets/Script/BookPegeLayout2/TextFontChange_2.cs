@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TextFontChange_2 : TextObject_2
 {
     public Font Font;
-    public void TextFontChangeGomarice()
+    public void TextFontChange()
     {
         for (int i = 0; i < PagesText.Length; i++)
         {
