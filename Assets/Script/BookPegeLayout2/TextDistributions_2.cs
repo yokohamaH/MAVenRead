@@ -8,16 +8,17 @@ using System.IO;
 //MAVenReadのダミー本の各ページにテキストを割り当てる
 public class TextDistributions_2 : TextObject_2
 {
+    public static int BaceRow = 15;
+    public static int BaceColumn = 12;
     int NumberTextSorte = 0;
     public void TextSort(int id)
     {
-        //Debug.Log(a);
         string TextDatas = bookData[id];
-        int NumberPages = TextDatas.Length / 15 / 12;
+        int NumberPages = TextDatas.Length / BaceRow / BaceColumn;
         int len = TextDatas.Length;
-        NumberTextSorte = 15 * 12;
+        NumberTextSorte = BaceRow * BaceColumn;
 
-        string[] pageData = new string[21];
+        string[] pageData = new string[50];
         PagesText[0].GetComponent<Text>().text = TextDatas;
         for (int i = 0; i < NumberPages + 1; i++)
         {
@@ -30,7 +31,7 @@ public class TextDistributions_2 : TextObject_2
                 pageData[i] = TextDatas.Substring(i * NumberTextSorte, len - i * NumberTextSorte);
             }
         }
-        for (int i = 15; i < NumberTextSorte + NumberTextSorte / 15; i += 16)
+        for (int i = BaceRow; i < NumberTextSorte + NumberTextSorte / BaceRow; i = i + BaceRow + 1)
         {
             for (int j = 0; j < NumberPages; j++)
             {
