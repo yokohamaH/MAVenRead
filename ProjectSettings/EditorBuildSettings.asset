@@ -32,7 +32,19 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/XBook_ver3.unity
     guid: 2f56e5cf2058aad4fbc6d3cf255c1515
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ChangeMAVenRead2.unity
     guid: 73ba391d813169e4c931f7d79b46b8a5
+  - enabled: 0
+    path: Assets/ResearchMode/Scenes/ResearchModeSample.unity
+    guid: b2ea44247999fe846983588a46fa8ad7
+  - enabled: 0
+    path: Assets/Scenes/ChangeMAVenRead3.unity
+    guid: 7d0ee9a3354c1c6448eeea1c033149ca
+  - enabled: 0
+    path: Assets/Scenes/ResearchTest.unity
+    guid: 9a6ea679f23d6ea41a18f801173456f4
+  - enabled: 1
+    path: Assets/Scenes/mirrer.unity
+    guid: 45f9f19f74f57c843b0b94c29c4631d4
   m_configObjects: {}
