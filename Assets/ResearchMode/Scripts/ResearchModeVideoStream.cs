@@ -1,6 +1,7 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using System;
 using System.Runtime.InteropServices;
@@ -20,7 +21,7 @@ public class ResearchModeVideoStream : MonoBehaviour
     [SerializeField] private bool renderLongDepthPreview = true;
     [SerializeField] private bool renderLFPreview = true;
     [SerializeField] private bool renderRFPreview = true;
-    [SerializeField] private bool renderPointCloud = true;
+    [SerializeField] public bool renderPointCloud = false;
 
 
     public GameObject depthPreviewPlane = null;
@@ -53,11 +54,17 @@ public class ResearchModeVideoStream : MonoBehaviour
     private Texture2D colorMediaTexture = null;
     private byte[] colorFrameData = null;
 
+    public GameObject maskPreviewPlane = null;
+    private Material maskMapMaterial = null;
+    private Texture2D maskMapTexture = null;
+    private byte[] maskMapData = null;    
+
     public GameObject pointCloudRendererGo;    
-    private PointCloudRenderer pointCloudRenderer;
+    private PointCloudRenderer pointCloudRenderer;    
 
     public UInt16 pointCloudNearOffset = 200;
     public UInt16 pointCloudFarOffset = 800;
+    [Range(0, 5)] public UInt16 cutoffLevel = 3;
 
     void Start()
     {
@@ -72,7 +79,7 @@ public class ResearchModeVideoStream : MonoBehaviour
         longDepthMediaMaterial = longDepthPreviewPlane.GetComponent<MeshRenderer>().material;
         longDepthMediaTexture = new Texture2D(320, 288, TextureFormat.Alpha8, false);
         longDepthMediaMaterial.mainTexture = longDepthMediaTexture;
-
+        
         LFMediaMaterial = LFPreviewPlane.GetComponent<MeshRenderer>().material;
         LFMediaTexture = new Texture2D(640, 480, TextureFormat.Alpha8, false);
         LFMediaMaterial.mainTexture = LFMediaTexture;
@@ -83,9 +90,14 @@ public class ResearchModeVideoStream : MonoBehaviour
 
         colorMediaMaterial = colorPreviewPlane.GetComponent<MeshRenderer>().material;
         colorMediaTexture = new Texture2D(760, 428, TextureFormat.BGRA32, false);
-        colorMediaMaterial.mainTexture = colorMediaTexture;                
+        colorMediaMaterial.mainTexture = colorMediaTexture;
+        
+        maskMapMaterial = maskPreviewPlane.GetComponent<MeshRenderer>().material;
+        maskMapTexture = new Texture2D(760, 428, TextureFormat.BGRA32, false);
+        maskMapMaterial.mainTexture = maskMapTexture;        
 
         pointCloudRenderer = pointCloudRendererGo.GetComponent<PointCloudRenderer>();
+
 
 
 #if WINDOWS_UWP
@@ -99,6 +111,7 @@ public class ResearchModeVideoStream : MonoBehaviour
         if(renderDepthPreview){
             researchMode.InitializeDepthSensor();
             researchMode.StartDepthSensorLoop();
+            researchMode.SetMaskCutoffOffset(cutoffLevel);
             Debug.Log("Successful initialization of the short throw sensor");
         }
 
@@ -141,7 +154,7 @@ public class ResearchModeVideoStream : MonoBehaviour
                 }                             
                 colorMediaTexture.LoadRawTextureData(colorFrameData);        
                 colorMediaTexture.Apply();
-                Debug.Log("Succeeded in updating the color texture");
+                //Debug.Log("Succeeded in updating the color texture");
             }            
         }
         
@@ -162,7 +175,7 @@ public class ResearchModeVideoStream : MonoBehaviour
 
                 depthMediaTexture.LoadRawTextureData(depthFrameData);
                 depthMediaTexture.Apply();
-                Debug.Log("Succeeded in updating the depth texture");
+                //Debug.Log("Succeeded in updating the depth texture");
             }
         }
 
@@ -183,7 +196,7 @@ public class ResearchModeVideoStream : MonoBehaviour
 
                 shortAbImageMediaTexture.LoadRawTextureData(shortAbImageFrameData);
                 shortAbImageMediaTexture.Apply();
-                Debug.Log("Succeeded in updating the short AB texture");
+                //Debug.Log("Succeeded in updating the short AB texture");
             }
         }        
         
@@ -204,12 +217,12 @@ public class ResearchModeVideoStream : MonoBehaviour
 
                 longDepthMediaTexture.LoadRawTextureData(longDepthFrameData);
                 longDepthMediaTexture.Apply();
-                Debug.Log("Succeeded in updating the long depth texture");
+                //Debug.Log("Succeeded in updating the long depth texture");
             }
         }        
                 
         // update LF camera texture        
-        if (startRealtimePreview && researchMode.LFImageUpdated() && renderLFPreview)
+        if (startRealtimePreview && researchMode.LFImageUpdated())
         {
             byte[] frameTexture = researchMode.GetLFCameraBuffer();
             if (frameTexture.Length > 0)
@@ -225,12 +238,12 @@ public class ResearchModeVideoStream : MonoBehaviour
 
                 LFMediaTexture.LoadRawTextureData(LFFrameData);
                 LFMediaTexture.Apply();
-                Debug.Log("Succeeded in updating the LF texture");
+                //Debug.Log("Succeeded in updating the LF texture");
             }
         }
         
         // update RF camera texture        
-        if (startRealtimePreview && researchMode.RFImageUpdated() && renderRFPreview)
+        if (startRealtimePreview && researchMode.RFImageUpdated())
         {
             byte[] frameTexture = researchMode.GetRFCameraBuffer();
             if (frameTexture.Length > 0)
@@ -246,12 +259,12 @@ public class ResearchModeVideoStream : MonoBehaviour
 
                 RFMediaTexture.LoadRawTextureData(RFFrameData);
                 RFMediaTexture.Apply();
-                Debug.Log("Succeeded in updating the RF texture");
+                //Debug.Log("Succeeded in updating the RF texture");
             }
         }                                        
-        
-        
+                
         // Update point cloud
+        /*
         if (renderPointCloud)
         {
             float[] pointCloud = researchMode.GetPointCloudBuffer();
@@ -261,18 +274,37 @@ public class ResearchModeVideoStream : MonoBehaviour
                 int pointCloudLength = pointCloud.Length / 3;
                 Vector3[] pointCloudVector3 = new Vector3[pointCloudLength];
                 Color32[] pointCloudRGB = new Color32[pointCloudLength];
-               
+                
                 for (int i = 0; i < pointCloudLength; i++)
-                {
+                {                    
                     pointCloudVector3[i] = new Vector3(pointCloud[3 * i], pointCloud[3 * i + 1], pointCloud[3 * i + 2]);
                     pointCloudRGB[i] = new Color32(pointCloudColor[3 * i], pointCloudColor[3 * i + 1], pointCloudColor[3 * i + 2], 255);
-
-                }                
+                }                                
                 pointCloudRenderer.Render(pointCloudVector3, pointCloudRGB);
-                Debug.Log("Succeeded in updating point cloud");
+                //Debug.Log("Succeeded in updating point cloud");
             }            
         }
+        */
         
+        // update mask map texture               
+        if (startRealtimePreview && researchMode.MaskMapTextureUpdated())
+        {
+            byte[] frameTexture = researchMode.GetMaskMapTextureBuffer();
+            if (frameTexture.Length > 0)
+            {
+                if (maskMapData == null)
+                {
+                    maskMapData = frameTexture;
+                }
+                else
+                {
+                    System.Buffer.BlockCopy(frameTexture, 0, maskMapData, 0, maskMapData.Length);
+                }
+                maskMapTexture.LoadRawTextureData(maskMapData);        
+                maskMapTexture.Apply();
+                //Debug.Log("Succeeded in updating mask map");
+            }
+        }           
         
 #endif
     }

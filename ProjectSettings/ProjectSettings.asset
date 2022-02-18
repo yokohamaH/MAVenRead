@@ -601,7 +601,7 @@ PlayerSettings:
   metroCertificatePassword: 
   metroCertificateSubject: DefaultCompany
   metroCertificateIssuer: DefaultCompany
-  metroCertificateNotAfter: 80c607a2faefd701
+  metroCertificateNotAfter: 8097400f2f2fd901
   metroApplicationDescription: Template_3D
   wsaImages: {}
   metroTileShortName: New Unity Project
