@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 using System.Runtime.InteropServices;
+using System.IO;
 
 #if WINDOWS_UWP
 using HL2UnityPlugin;
@@ -98,6 +99,7 @@ public class ResearchModeVideoStream : MonoBehaviour
 
         pointCloudRenderer = pointCloudRendererGo.GetComponent<PointCloudRenderer>();
 
+        
 
 
 #if WINDOWS_UWP
@@ -302,6 +304,9 @@ public class ResearchModeVideoStream : MonoBehaviour
                 }
                 maskMapTexture.LoadRawTextureData(maskMapData);        
                 maskMapTexture.Apply();
+                var path = Application.persistentDataPath + "\\mask.png";
+                var png = maskMapTexture.EncodeToPNG();
+                File.WriteAllBytes(path, png);
                 //Debug.Log("Succeeded in updating mask map");
             }
         }           

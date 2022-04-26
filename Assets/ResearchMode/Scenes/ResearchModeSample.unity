@@ -582,7 +582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &168399717
 Transform:
   m_ObjectHideFlags: 0
@@ -1316,8 +1316,8 @@ MonoBehaviour:
   renderColorPreview: 1
   renderDepthPreview: 1
   renderLongDepthPreview: 1
-  renderLFPreview: 1
-  renderRFPreview: 1
+  renderLFPreview: 0
+  renderRFPreview: 0
   renderPointCloud: 1
   depthPreviewPlane: {fileID: 456786859}
   shortAbImagePreviewPlane: {fileID: 349520856}
@@ -1329,7 +1329,7 @@ MonoBehaviour:
   pointCloudRendererGo: {fileID: 168399716}
   pointCloudNearOffset: 10
   pointCloudFarOffset: 300
-  cutoffLevel: 3
+  cutoffLevel: 5
 --- !u!4 &891080481
 Transform:
   m_ObjectHideFlags: 0
