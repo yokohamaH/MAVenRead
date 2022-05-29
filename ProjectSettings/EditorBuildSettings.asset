@@ -35,7 +35,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ChangeMAVenRead2.unity
     guid: 73ba391d813169e4c931f7d79b46b8a5
-  - enabled: 1
+  - enabled: 0
     path: Assets/ResearchMode/Scenes/ResearchModeSample.unity
     guid: b2ea44247999fe846983588a46fa8ad7
   - enabled: 0
@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/mirrer.unity
     guid: 45f9f19f74f57c843b0b94c29c4631d4
+  - enabled: 1
+    path: Assets/Scenes/TextMove.unity
+    guid: 8a75571d21116eb4ba23ca98f667d434
   m_configObjects: {}

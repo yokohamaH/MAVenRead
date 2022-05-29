@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class OneCharacterOn : MonoBehaviour
 {
 	/// <summary>
@@ -26,6 +27,8 @@ public class OneCharacterOn : MonoBehaviour
 	/// </summary>
 	public bool isLoop = false;
 
+	public float LastTime = 1.0f;
+
 	/// <summary>
 	/// TextMeshPro
 	/// </summary>
@@ -48,11 +51,10 @@ public class OneCharacterOn : MonoBehaviour
 	/// <summary>
 	/// Override Unity Function
 	/// </summary>
-	/*
 	private void Start()
 	{
 		if (this.playOnEnable) { Play(); }
-	}*/
+	}
 
 	/// <summary>
 	/// Override Unity Function
@@ -105,7 +107,13 @@ public class OneCharacterOn : MonoBehaviour
 	{
 
 		int maxVisibleCharacters = this.text.textInfo.characterCount;
-		float maxTime = (maxVisibleCharacters + 1) * speedPerCharacter;
+		float maxTime = (maxVisibleCharacters + 1) * speedPerCharacter + LastTime;
+
+		float speedPerCharacters = speedPerCharacter;
+		if (this.time == maxTime)
+		{
+			speedPerCharacters = LastTime;
+		}
 
 		this.time += deltaTime;
 
@@ -126,3 +134,4 @@ public class OneCharacterOn : MonoBehaviour
 		}
 	}
 }
+
