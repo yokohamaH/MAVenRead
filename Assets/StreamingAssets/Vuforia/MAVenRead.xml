@@ -1,9 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="frame09" size="0.100000 0.100000" />
+    <ImageTarget name="frame08" size="0.100000 0.100000" />
+    <ImageTarget name="frame07" size="0.100000 0.100000" />
+    <ImageTarget name="frame03" size="0.100000 0.100000" />
+    <ImageTarget name="frame06" size="0.100000 0.100000" />
+    <ImageTarget name="frame05" size="0.100000 0.100000" />
+    <ImageTarget name="frame04" size="0.100000 0.100000" />
+    <ImageTarget name="frame02" size="0.100000 0.100000" />
+    <ImageTarget name="frame01" size="0.100000 0.100000" />
+    <ImageTarget name="frame40" size="0.100000 0.100000" />
     <ImageTarget name="frame60" size="0.100000 0.100000" />
+    <ImageTarget name="frame59" size="0.100000 0.100000" />
+    <ImageTarget name="frame58" size="0.100000 0.100000" />
+    <ImageTarget name="frame57" size="0.100000 0.100000" />
+    <ImageTarget name="frame56" size="0.100000 0.100000" />
+    <ImageTarget name="frame55" size="0.100000 0.100000" />
+    <ImageTarget name="frame54" size="0.100000 0.100000" />
+    <ImageTarget name="frame53" size="0.100000 0.100000" />
+    <ImageTarget name="frame52" size="0.100000 0.100000" />
+    <ImageTarget name="frame51" size="0.100000 0.100000" />
+    <ImageTarget name="frame50" size="0.100000 0.100000" />
+    <ImageTarget name="frame49" size="0.100000 0.100000" />
+    <ImageTarget name="frame48" size="0.100000 0.100000" />
+    <ImageTarget name="frame47" size="0.100000 0.100000" />
+    <ImageTarget name="frame46" size="0.100000 0.100000" />
+    <ImageTarget name="frame45" size="0.100000 0.100000" />
+    <ImageTarget name="frame44" size="0.100000 0.100000" />
+    <ImageTarget name="frame43" size="0.100000 0.100000" />
+    <ImageTarget name="frame42" size="0.100000 0.100000" />
+    <ImageTarget name="frame41" size="0.100000 0.100000" />
+    <ImageTarget name="frame39" size="0.100000 0.100000" />
+    <ImageTarget name="frame38" size="0.100000 0.100000" />
+    <ImageTarget name="frame37" size="0.100000 0.100000" />
+    <ImageTarget name="frame36" size="0.100000 0.100000" />
+    <ImageTarget name="frame35" size="0.100000 0.100000" />
+    <ImageTarget name="frame34" size="0.100000 0.100000" />
+    <ImageTarget name="frame33" size="0.100000 0.100000" />
+    <ImageTarget name="frame32" size="0.100000 0.100000" />
+    <ImageTarget name="frame31" size="0.100000 0.100000" />
+    <ImageTarget name="frame30" size="0.100000 0.100000" />
+    <ImageTarget name="frame29" size="0.100000 0.100000" />
+    <ImageTarget name="frame28" size="0.100000 0.100000" />
+    <ImageTarget name="frame27" size="0.100000 0.100000" />
+    <ImageTarget name="frame26" size="0.100000 0.100000" />
+    <ImageTarget name="frame25" size="0.100000 0.100000" />
+    <ImageTarget name="frame24" size="0.100000 0.100000" />
+    <ImageTarget name="frame23" size="0.100000 0.100000" />
+    <ImageTarget name="frame22" size="0.100000 0.100000" />
     <ImageTarget name="frame21" size="0.100000 0.100000" />
-    <ImageTarget name="frame3" size="0.100000 0.100000" />
+    <ImageTarget name="stage2" size="0.100000 0.100000" />
+    <ImageTarget name="stage1" size="0.100000 0.100000" />
+    <ImageTarget name="novel3" size="0.100000 0.100000" />
+    <ImageTarget name="novel2" size="0.100000 0.100000" />
+    <ImageTarget name="novel1" size="0.100000 0.100000" />
     <ImageTarget name="frame20" size="0.100000 0.100000" />
     <ImageTarget name="frame19" size="0.100000 0.100000" />
     <ImageTarget name="frame18" size="0.100000 0.100000" />
@@ -15,13 +66,5 @@
     <ImageTarget name="frame12" size="0.100000 0.100000" />
     <ImageTarget name="frame11" size="0.100000 0.100000" />
     <ImageTarget name="frame10" size="0.100000 0.100000" />
-    <ImageTarget name="frame9" size="0.100000 0.100000" />
-    <ImageTarget name="frame8" size="0.100000 0.100000" />
-    <ImageTarget name="frame7" size="0.100000 0.100000" />
-    <ImageTarget name="frame6" size="0.100000 0.100000" />
-    <ImageTarget name="frame5" size="0.100000 0.100000" />
-    <ImageTarget name="frame4" size="0.100000 0.100000" />
-    <ImageTarget name="frame2" size="0.100000 0.100000" />
-    <ImageTarget name="frame1" size="0.100000 0.100000" />
   </Tracking>
 </QCARConfig>

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Text
   - Character
+  - MoveText
   layers:
   - Default
   - TransparentFX

@@ -443,7 +443,7 @@ public class PozitionMove : MonoBehaviour
 					vertex2 += delta;
 					vertex3 += delta;
 				}
-				
+
 				if (animationData.rotation.use)
 				{
 					float ratio = animationData.rotation.curve.Evaluate(CalcAnimationTime(time, i, animationData.rotation));
@@ -522,7 +522,7 @@ public class PozitionMove : MonoBehaviour
 				animatedVerts[vertexIndex + 2] = vertex2;
 				animatedVerts[vertexIndex + 3] = vertex3;
 			}
-			/*
+
 			// 色アニメーション
 			if (animationData.color.use || animationData.alpha.use || animationData.colorNoise.use || animationData.alphaNoise.use)
 			{
@@ -576,7 +576,7 @@ public class PozitionMove : MonoBehaviour
 				animatedColors[vertexIndex + 1] = color1;
 				animatedColors[vertexIndex + 2] = color2;
 				animatedColors[vertexIndex + 3] = color3;
-			}*/
+			}
 		}
 
 		// 表示しているマテリアルの数だけ頂点を更新します

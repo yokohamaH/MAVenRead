@@ -48,9 +48,12 @@ EditorBuildSettings:
     path: Assets/Scenes/mirrer.unity
     guid: 45f9f19f74f57c843b0b94c29c4631d4
   - enabled: 0
-    path: Assets/Scenes/TextMove.unity
-    guid: 8a75571d21116eb4ba23ca98f667d434
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/TextMove.unity
     guid: e71d68cf62430324dad247fcd8a2e46b
+  - enabled: 0
+    path: Assets/Scenes/TestTextMove.unity
+    guid: 5e7240a4d07d0cc47819573eb96c985f
   m_configObjects: {}
