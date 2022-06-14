@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class normalText : MonoBehaviour
 {
@@ -9,18 +10,11 @@ public class normalText : MonoBehaviour
     private GameObject[] OnCharacters;
     private OneCharacterOn Characterspeed;
     private TMPro.TMP_Text text = default;
+    private TMPro.TMP_Text ButtonText;
+    public GameObject ButtontextObject;
+    
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void normalChange()
     {
@@ -33,6 +27,8 @@ public class normalText : MonoBehaviour
                 OnCharacters[i].GetComponent<OneCharacterOn>().enabled = true;
             }
             normal = false;
+            ButtonText = ButtontextObject.GetComponent<TMPro.TMP_Text>();
+            ButtonText.text = "RSVP";
         }
         else
         {
@@ -43,6 +39,8 @@ public class normalText : MonoBehaviour
                 this.text.maxVisibleCharacters = 500;
             }
             normal = true;
+            ButtonText = ButtontextObject.GetComponent<TMPro.TMP_Text>();
+            ButtonText.text = "nomal";
         }
     }
 }

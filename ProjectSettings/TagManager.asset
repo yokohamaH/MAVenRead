@@ -7,6 +7,8 @@ TagManager:
   - Text
   - Character
   - MoveText
+  - AnimationButtonText
+  - AnimationChangeButton
   layers:
   - Default
   - TransparentFX
