@@ -26,7 +26,6 @@ public class AnimationChange : MonoBehaviour
         DelayButtonText = DelayButton.GetComponent<TMPro.TMP_Text>();
         for (int i = 0; i < MoveText.Length; i++)
         {
-            Debug.Log(i);
             animationDatas = MoveText[i].GetComponent<TextMeshProGeometryAnimator>().animationData;
             animationDatas.position.use = true;
             animationDatas.positionNoise.use = false;
@@ -35,6 +34,7 @@ public class AnimationChange : MonoBehaviour
             animationDatas.scaleNoise.use = false;
             animationDatas.useMaxVisibleCharacter = true;
             animationDatas.useMaxVisibleCharacter = false;
+            MoveText[i].GetComponent<TextMeshProGeometryAnimator>().Refresh(true);
         }
         if (animationDatas.position.wave == 0f)
         {
@@ -45,6 +45,7 @@ public class AnimationChange : MonoBehaviour
             DelayButtonText.text = ButtonTextsON[5];
         }
         ButtonTextChange(0);
+
     }
     public void positionNoiseOn()
     {
@@ -60,6 +61,7 @@ public class AnimationChange : MonoBehaviour
             animationDatas.scaleNoise.use = false;
             animationDatas.useMaxVisibleCharacter = true;
             animationDatas.useMaxVisibleCharacter = false;
+            MoveText[i].GetComponent<TextMeshProGeometryAnimator>().Refresh(true);
         }
         if (animationDatas.positionNoise.wave == 0f)
         {
@@ -85,6 +87,7 @@ public class AnimationChange : MonoBehaviour
             animationDatas.scaleNoise.use = false;
             animationDatas.useMaxVisibleCharacter = true;
             animationDatas.useMaxVisibleCharacter = false;
+            MoveText[i].GetComponent<TextMeshProGeometryAnimator>().Refresh(true);
         }
         if (animationDatas.scale.wave == 0f)
         {
@@ -110,6 +113,7 @@ public class AnimationChange : MonoBehaviour
             animationDatas.scaleNoise.use = false;
             animationDatas.useMaxVisibleCharacter = true;
             animationDatas.useMaxVisibleCharacter = false;
+            MoveText[i].GetComponent<TextMeshProGeometryAnimator>().Refresh(true);
         }
         if (animationDatas.rotation.wave == 0f)
         {
@@ -135,6 +139,7 @@ public class AnimationChange : MonoBehaviour
             animationDatas.scaleNoise.use = true;
             animationDatas.useMaxVisibleCharacter = true;
             animationDatas.useMaxVisibleCharacter = false;
+            MoveText[i].GetComponent<TextMeshProGeometryAnimator>().Refresh(true);
         }
         if(animationDatas.scaleNoise.wave == 0f)
         {
@@ -159,13 +164,13 @@ public class AnimationChange : MonoBehaviour
                 if (animationDatas.position.wave == 0f)
                 {
                     animationDatas.position.wave = 0.35f;
-                    animationDatas.position.curve = new AnimationCurve(new Keyframe(0f, 0f), new Keyframe(0.5f, 30f), new Keyframe(1f, 0f));
+                    //animationDatas.position.curve = new AnimationCurve(new Keyframe(0f, 0f), new Keyframe(0.5f, 30f), new Keyframe(1f, 0f));
                     DelayButtonText.text = ButtonTextsON[5];
                 }
                 else
                 {
                     animationDatas.position.wave = 0f;
-                    animationDatas.position.curve = AnimationCurve.Linear(timeStart: 0f, valueStart: 0f, timeEnd: 1f, valueEnd: 1f);
+                    //animationDatas.position.curve = AnimationCurve.Linear(timeStart: 0f, valueStart: 0f, timeEnd: 1f, valueEnd: 1f);
                     DelayButtonText.text = ButtonTextsOFF[5];
                 }
             }
@@ -174,13 +179,13 @@ public class AnimationChange : MonoBehaviour
                 if (animationDatas.rotation.wave == 0f)
                 {
                     animationDatas.rotation.wave = 0.35f;
-                    animationDatas.rotation.curve = new AnimationCurve(new Keyframe(0f, 0f), new Keyframe(0.5f, 1f), new Keyframe(1f, 0f));
+                    //animationDatas.rotation.curve = new AnimationCurve(new Keyframe(0f, 0f), new Keyframe(0.5f, 1f), new Keyframe(1f, 0f));
                     DelayButtonText.text = ButtonTextsON[5];
                 }
                 else
                 {
                     animationDatas.rotation.wave = 0f;
-                    animationDatas.rotation.curve = AnimationCurve.Linear(timeStart: 0f, valueStart: 0f, timeEnd: 1f, valueEnd: 1f);
+                    //animationDatas.rotation.curve = AnimationCurve.Linear(timeStart: 0f, valueStart: 0f, timeEnd: 1f, valueEnd: 1f);
                     DelayButtonText.text = ButtonTextsOFF[5];
                 }
             }
@@ -189,13 +194,13 @@ public class AnimationChange : MonoBehaviour
                 if (animationDatas.scale.wave == 0f)
                 {
                     animationDatas.scale.wave = 0.35f;
-                    animationDatas.scale.curve = new AnimationCurve(new Keyframe(0f, 0f), new Keyframe(0.5f, 1f), new Keyframe(1f, 0f));
+                    //animationDatas.scale.curve = new AnimationCurve(new Keyframe(0f, 0f), new Keyframe(0.5f, 1f), new Keyframe(1f, 0f));
                     DelayButtonText.text = ButtonTextsON[5];
                 }
                 else
                 {
                     animationDatas.scale.wave = 0f;
-                    animationDatas.scale.curve = AnimationCurve.Linear(timeStart: 0f, valueStart: 0f, timeEnd: 1f, valueEnd: 1f);
+                    //animationDatas.scale.curve = AnimationCurve.Linear(timeStart: 0f, valueStart: 0f, timeEnd: 1f, valueEnd: 1f);
                     DelayButtonText.text = ButtonTextsOFF[5];
                 }
             }
@@ -219,7 +224,7 @@ public class AnimationChange : MonoBehaviour
                 if (animationDatas.scaleNoise.wave == 0f)
                 {
                     animationDatas.scaleNoise.wave = 0.35f;
-                    animationDatas.scaleNoise.curve = new AnimationCurve(new Keyframe(0f, 0f), new Keyframe(0.5f, 30f), new Keyframe(1f, 0f));
+                    animationDatas.scaleNoise.curve = new AnimationCurve(new Keyframe(0f, 0f), new Keyframe(0.5f, 1f), new Keyframe(1f, 0f));
                     DelayButtonText.text = ButtonTextsON[5];
                 }
                 else
@@ -229,6 +234,7 @@ public class AnimationChange : MonoBehaviour
                     DelayButtonText.text = ButtonTextsOFF[5];
                 }
             }
+            MoveText[i].GetComponent<TextMeshProGeometryAnimator>().Refresh(true);
         }
 
     }
