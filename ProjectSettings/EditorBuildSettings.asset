@@ -50,7 +50,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TextMove.unity
     guid: e71d68cf62430324dad247fcd8a2e46b
   - enabled: 0
@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ButtonTextMove.unity
     guid: f1fdb79ba07ab4148a3e21ba0ac6233f
+  - enabled: 0
+    path: Assets/Scenes/ButtonTextMove2.unity
+    guid: 2212f958fbeff414cad90af5e0beee32
   m_configObjects: {}
