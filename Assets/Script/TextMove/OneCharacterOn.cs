@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class OneCharacterOn : MonoBehaviour
 {
+	private GameObject[] MoveText;
+	private TextMeshProGeometryAnimation animationDatas;
+	protected float Previoustime = 0f;
 	/// <summary>
 	/// アニメーション中かどうか
 	/// </summary>
@@ -132,6 +135,15 @@ public class OneCharacterOn : MonoBehaviour
 				Finish();
 			}
 		}
+	}
+	public void animationRefresh()
+    {
+		float nowTime = Time.time;
+		if (nowTime - Previoustime > 2)
+		{
+			this.time = 0;
+		}
+		Previoustime = nowTime;
 	}
 }
 
