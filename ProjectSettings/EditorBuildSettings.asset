@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ButtonTextMove2.unity
     guid: 2212f958fbeff414cad90af5e0beee32
+  - enabled: 0
+    path: Assets/Samples/Mixed Reality Toolkit Examples/2.8.2/Demos - EyeTracking/Scenes/EyeTrackingDemo-00-RootScene.unity
+    guid: 27c3fbe0128089f48994cdc6af8668fc
   m_configObjects: {}
