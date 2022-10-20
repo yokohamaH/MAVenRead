@@ -98,7 +98,7 @@ public class OneCharacterOn : MonoBehaviour
 		if (!this.isAnimating)
 			return;
 
-		this.isAnimating = false;
+		//this.isAnimating = false;
 		this.text.maxVisibleCharacters = this.text.textInfo.characterCount;
 		this.time = 0.0f;
 	}

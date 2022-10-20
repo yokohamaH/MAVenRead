@@ -581,7 +581,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLWasmStreaming: 0
   scriptingDefineSymbols:
-    14: master
+    14: release
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}

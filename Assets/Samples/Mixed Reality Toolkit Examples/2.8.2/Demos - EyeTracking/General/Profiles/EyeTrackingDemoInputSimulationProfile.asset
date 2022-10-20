@@ -28,7 +28,7 @@ MonoBehaviour:
   mouseLookButton:
     bindingType: 1
     code: 1
-  mouseLookToggle: 0
+  mouseLookToggle: 1
   isControllerLookInverted: 1
   cameraOriginOffset: {x: 0, y: 0, z: 0}
   currentControlMode: 0

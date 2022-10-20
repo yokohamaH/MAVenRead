@@ -47,10 +47,25 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/ButtonTextMove2.unity
+  - enabled: 0
+    path: Assets/Scenes/MAVenReadVerse_eye.unity
     guid: 2212f958fbeff414cad90af5e0beee32
   - enabled: 0
     path: Assets/Samples/Mixed Reality Toolkit Examples/2.8.2/Demos - EyeTracking/Scenes/EyeTrackingDemo-00-RootScene.unity
     guid: 27c3fbe0128089f48994cdc6af8668fc
+  - enabled: 0
+    path: Assets/Scenes/MAVenReadVerse_eye2.unity
+    guid: f54e54f2754cfb8439d72a06cb242c6b
+  - enabled: 0
+    path: Assets/Scenes/MAVenReadVerse.unity
+    guid: 162936e94b1ae3d48be8d1b283e11a54
+  - enabled: 0
+    path: Assets/Scenes/MAVenReadVerseTestOnipad.unity
+    guid: ab3361f0872303b4580c1a89434515b8
+  - enabled: 1
+    path: Assets/Scenes/MAVenReadVerseTest.unity
+    guid: ffb52fcb1983ec14490453c5ad299d28
+  - enabled: 0
+    path: Assets/Scenes/MAVenReadVerseOnProjecter.unity
+    guid: 1f817644db310f74d9b3efb58db9208b
   m_configObjects: {}
