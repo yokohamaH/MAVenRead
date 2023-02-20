@@ -203,8 +203,6 @@ GameObject:
   - component: {fileID: 8463411939801199319}
   - component: {fileID: 8463411939801199317}
   - component: {fileID: 8463411939801199318}
-  - component: {fileID: 8463411939801199316}
-  - component: {fileID: 8463411939801199314}
   m_Layer: 5
   m_Name: Text
   m_TagString: Text
@@ -272,36 +270,6 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 2.5
   m_Text: 
---- !u!114 &8463411939801199316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8463411939801199304}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2219be2132731bc4cbacbceb559af622, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ImageTarget1: {fileID: 0}
-  ImageTarget2: {fileID: 0}
---- !u!114 &8463411939801199314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8463411939801199304}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db7903a0598e0eb43962b005ea74961b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NonRotatableCharacters: 
-  ShiftCharacters: 
-  ShiftXPixels: []
-  ShiftYPixels: []
 --- !u!1 &8463411939825518142
 GameObject:
   m_ObjectHideFlags: 0

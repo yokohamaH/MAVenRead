@@ -9,7 +9,7 @@ public class TestSceneChange : MonoBehaviour
     // Start is called before the first frame update
     private TextMeshProGeometryAnimation animationDatas;
     private GameObject[] MoveText;
-    private string[,] TextDeta = new string[3, 8] { { "汚れっちまった悲しみに\n今日も小雪の降りかかる\n汚れっちまった悲しみに\n今日も風さえ吹きすぎる", "汚れっちまった悲しみは\nたとえば狐の革裘（かわごろも）\n汚れっちまった悲しみは\n小雪のかかってちぢこまる","","","汚れっちまった悲しみは\nなにのぞむなくねがうなく\n汚れっちまった悲しみは\n倦怠（けだい）のうちに死を夢（ゆめ）む" ,"汚れっちまった悲しみに\nいたいたしくも怖気（おじけ）づき\n汚れっちまった悲しみに\nなすところもなく日は暮れる……","",""}, { "子供たちよ。\nこれは譲り葉の木です。\nこの譲り葉は\n新しい葉が出来ると\n入れ代つてふるい葉が落ちてしまふのです。", "こんなに厚い葉\nこんなに大きい葉でも\n新しい葉が出来ると無造作に落ちる\n新しい葉にいのちを譲つて――。","子供たちよ。\nお前たちは何を欲しがらないでも\n凡てのものがお前たちに譲られるのです。\n太陽の廻るかぎり\n譲られるものは絶えません。","輝ける大都会も\nそつくりお前たちが譲り受けるのです。\n読みきれないほどの書物も\nみんなお前たちの手に受取るのです。\n幸福なる子供たちよ\n前たちの手はまだ小さいけれど――。","世のお父さん、お母さんたちは\n何一つ持つてゆかない。\nみんなお前たちに譲ゆづつてゆくために\nいのちあるもの、よいもの、美しいものを\n一生懸命に造つてゐます。","今、お前たちは気が附かないけれど\nひとりでにいのちは延びる。\n鳥のやうにうたひ、花のやうに笑つてゐる間に気が附いてきます。","そしたら子供たちよ\nもう一度譲り葉の木の下に立つて\n譲り葉を見る時が来るでせう。",""},{ "濁みし声下より叫ぶ\n炉はいまし何度にありや\n八百といらへをすれば\n声なくて炭たんを掻く音", "声ありて更に叫べり\nづくはいまし何度にありや\n八百といらへをすれば\nまたもちえと舌打つひゞき","灼熱のるつぼをつゝみ\nむらさきの暗き火は燃え\nそがなかに水うち汲める\n母の像恍とうかべり" ,"声ありて下より叫ぶ\n針はいま何度にありや\n八百といらへて云へば\nたちまちに階を来る音","八百は何のたはごと\n汝はこゝに睡れるならん\n見よ鉄はいま千二百\nなれが眼は何を読めるや","あなあやし紫の火を\nみつめたる眼はうつろにて\n熱計の針も見わかず\n奇しき汗せなにうるほふ","あゝなれは何を泣けるぞ\n涙もて金はとくるや\n千二百いざ下り行かん\nそれいまぞ鉄は熟しぬ","融鉄はうちとゞろきて\n火花あげけむりあぐれば\n紫の焔は消えて\n室のうちにはかにくらし"} };
+    private string[,] TextDeta = new string[5, 8] { {"汚れっちまった悲しみに:中原中也\n汚れっちまった悲しみに\n今日も小雪の降りかかる\n汚れっちまった悲しみに\n今日も風さえ吹きすぎる", "汚れっちまった悲しみは\nたとえば狐の革裘（かわごろも）\n汚れっちまった悲しみは\n小雪のかかってちぢこまる", "汚れっちまった悲しみは\nなにのぞむなくねがうなく\n汚れっちまった悲しみは\n倦怠（けだい）のうちに死を夢（ゆめ）む", "汚れっちまった悲しみに\nいたいたしくも怖気（おじけ）づき\n汚れっちまった悲しみに\nなすところもなく日は暮れる……", "　", "　"," "," " }, {  "　　もしも、あめのかはりに\n村山籌子\nもしも、あめのかはりに\n　　ねこだの\n　　いぬだの\n　　ねずみだのがふつてきたら\n　　まあ、\n　　どんなにおかしいでせうね。", "　　　そして、\n　　　それが、\n　　　いくにちも\n　　　いくにちも\n　　　ふりつづけたら、","　　　まあ\n　　　せかいぢうは\n　　　ねこだらけ、\n　　　いぬだらけ、\n　　　ねずみだらけに\n　　　なるでせうね。"," "," "," "," "," "}, { "蟻地獄\n萩原朔太郎","ありぢごくは蟻をとらへんとて\nおとし穴の底にひそみかくれぬ\nありぢごくの貪婪(たんらん)の瞳に\nかげろふはちらりちらりと燃えてあさましや。" ,"ほろほろと砂のくづれ落つるひびきに\nありぢごくはおどろきて隱れ家をはしりいづれば\nなにかしらねどうす紅く長きものが走りて居たりき。","ありぢごくの黒い手脚に\nかんかんと日の照りつける夏の日のまつぴるま\nあるかなきかの蟲けらの落す涙は\n草の葉のうへに光りて消えゆけり。\nあとかたもなく消えゆけり。"," "," "," "," "},{ "山の歓喜:河井酔茗\nあらゆる山が歓んでゐる\nあらゆる山が語つてゐる\nあらゆる山が足ぶみして舞ふ、躍る", "　　　あちらむく山と\n　　　こちらむく山と\n　　　合つたり\n　　　離れたり" ,"　　　出てくる山と\n　　　かくれる山と\n　　　低くなり\n　　　高くなり","　　　家族のやうに親しい山と\n　　　他人のやうに疎い山と\n　　　遠くなり\n　　　近くなり","　　　あらゆる山が\n　　　山の日に歓喜し\n　　　山の愛にうなづき","　　　今や\n　　　生のかがやきは\n　　　空いつぱいにひろがつてゐる"," "," "},{ "明日\n新美南吉" ,"花園みたいにまつてゐる。\n祭みたいにまつてゐる。\n明日がみんなをまつてゐる。","草の芽\nあめ牛、てんと虫。\n明日はみんなをまつてゐる。","明日はさなぎが蝶(てふ)になる。\n明日はつぼみが花になる。\n明日は卵がひなになる。","明日はみんなをまつてゐる。\n泉のやうにわいてゐる。\nらんぷのやうに点(とも)つてる。"," "," "," "} };
     public GameObject page1;
     public GameObject page2;
     public GameObject page3;
@@ -26,6 +26,7 @@ public class TestSceneChange : MonoBehaviour
         MoveText = GameObject.FindGameObjectsWithTag("MoveText");
         for (int i = 0; i < MoveText.Length; i++)
         {
+
             MoveText[i].GetComponent<TextMeshProGeometryAnimator>().enabled =false;
             MoveText[i].GetComponent<OneCharacterOn>().enabled =true;
             animationDatas = MoveText[i].GetComponent<TextMeshProGeometryAnimator>().animationData;
@@ -105,6 +106,23 @@ public class TestSceneChange : MonoBehaviour
             MoveText[i].GetComponent<OneCharacterOn>().Finish();
         }
     }
+    public void plean()
+    {
+        MoveText = GameObject.FindGameObjectsWithTag("MoveText");
+        for (int i = 0; i < MoveText.Length; i++)
+        {
+            MoveText[i].GetComponent<TextMeshProGeometryAnimator>().enabled = true;
+            MoveText[i].GetComponent<OneCharacterOn>().enabled = false;
+            animationDatas = MoveText[i].GetComponent<TextMeshProGeometryAnimator>().animationData;
+            animationDatas.position.use = false;
+            animationDatas.positionNoise.use = false;
+            animationDatas.scale.use = false;
+            animationDatas.rotation.use = false;
+            animationDatas.scaleNoise.use = false;
+            MoveText[i].GetComponent<TextMeshProGeometryAnimator>().Refresh(true);
+            MoveText[i].GetComponent<OneCharacterOn>().Finish();
+        }
+    }
 
     public void yogorecchimattakanashimini()
     {
@@ -125,7 +143,7 @@ public class TestSceneChange : MonoBehaviour
         newText = page8.GetComponent<TMPro.TMP_Text>();
         newText.text = TextDeta[0, 7];
     }
-    public void koityunaka()
+    public void moshimoamenokawarini()
     {
         newText = page1.GetComponent<TMPro.TMP_Text>();
         newText.text = TextDeta[1, 0];
@@ -144,7 +162,7 @@ public class TestSceneChange : MonoBehaviour
         newText = page8.GetComponent<TMPro.TMP_Text>();
         newText.text = TextDeta[1, 7];
     }
-    public void gennso()
+    public void arizigoku()
     {
         newText = page1.GetComponent<TMPro.TMP_Text>();
         newText.text = TextDeta[2, 0];
@@ -162,5 +180,43 @@ public class TestSceneChange : MonoBehaviour
         newText.text = TextDeta[2, 6];
         newText = page8.GetComponent<TMPro.TMP_Text>();
         newText.text = TextDeta[2, 7];
+    }
+    public void yamanokannki()
+    {
+        newText = page1.GetComponent<TMPro.TMP_Text>();
+        newText.text = TextDeta[3, 0];
+        newText = page2.GetComponent<TMPro.TMP_Text>();
+        newText.text = TextDeta[3, 1];
+        newText = page3.GetComponent<TMPro.TMP_Text>();
+        newText.text = TextDeta[3, 2];
+        newText = page4.GetComponent<TMPro.TMP_Text>();
+        newText.text = TextDeta[3, 3];
+        newText = page5.GetComponent<TMPro.TMP_Text>();
+        newText.text = TextDeta[3, 4];
+        newText = page6.GetComponent<TMPro.TMP_Text>();
+        newText.text = TextDeta[3, 5];
+        newText = page7.GetComponent<TMPro.TMP_Text>();
+        newText.text = TextDeta[3, 6];
+        newText = page8.GetComponent<TMPro.TMP_Text>();
+        newText.text = TextDeta[3, 7];
+    }
+    public void ashita()
+    {
+        newText = page1.GetComponent<TMPro.TMP_Text>();
+        newText.text = TextDeta[4, 0];
+        newText = page2.GetComponent<TMPro.TMP_Text>();
+        newText.text = TextDeta[4, 1];
+        newText = page3.GetComponent<TMPro.TMP_Text>();
+        newText.text = TextDeta[4, 2];
+        newText = page4.GetComponent<TMPro.TMP_Text>();
+        newText.text = TextDeta[4, 3];
+        newText = page5.GetComponent<TMPro.TMP_Text>();
+        newText.text = TextDeta[4, 4];
+        newText = page6.GetComponent<TMPro.TMP_Text>();
+        newText.text = TextDeta[4, 5];
+        newText = page7.GetComponent<TMPro.TMP_Text>();
+        newText.text = TextDeta[4, 6];
+        newText = page8.GetComponent<TMPro.TMP_Text>();
+        newText.text = TextDeta[4, 7];
     }
 }
